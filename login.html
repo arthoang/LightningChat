@@ -1,0 +1,78 @@
+<!--
+ * file: login.html
+ * author: Andrew Hoang
+ * date: 30 Jan 2022
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- make the responsive design works on real devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- meta description for SEO -->
+        <meta name="description" content="Quick chat app, lighting fast, anywhere, any platform">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <!-- include stylesheets  -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- JQuery -->
+        <script src="scripts/jquery-3.6.0.js"></script>
+        <script src="scripts/jquery-ui.js"></script>
+        <!-- JavaScript -->
+        <script src="scripts/auth.js"></script>
+        <!-- ionicons install-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <title>Lightning Chat</title>
+    </head>
+    <body>
+        <!--HEADER -->
+        <header class="header">
+            <a href="index.html">
+                <img class="logo" alt="Lightning Logo" src="images/logo.png">
+            </a>
+            <div class="app-name">
+                Lightning Chat
+            </div>
+        </header>
+        <!--MAIN-->
+
+        <section class="login-container">
+            <form class="login-form">
+                <p class="heading-secondary">Lightning fast, anywhere, any platform</p>
+                
+                <input type="text" name="userId" id="userId" placeholder="Your unique username"/>
+                <input type="password" name="pw" id="pw" placeholder="Your Password"/>
+                <p class="error-msg hidden" id="error-msg"></p>
+                <div class="form-buttons">
+                    <a href="#" class="btn btn--full" id="login-btn">Login</a>
+                    <a href="#" class="btn btn--outline" id="register-btn">Register</a>
+                </div>
+            </form>            
+        </section>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container grid grid--footer">
+                <p class="copyright">
+                    Copyright &copy; 2022 by Andrew Hoang. All rights reserved.
+                </p>
+                <address class="contacts"> <!-- contact information -->
+                    <p>
+                        <a class="footer-link" href="mailto:andrew.x.hoang@outlook.com">Contact Me</a>
+                    </p>
+                </address>
+            </div>
+            
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,479 @@
+/*
+ * file: style.css
+ * author: Andrew Hoang
+ * date: 30 Jan 2022
+*/
+
+/*
+main color: F6B416
+*/
+
+/******************************/
+/* GENERAL COMPONENTS */
+/******************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* style the focus ring of all element*/
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem rgba(194, 159, 2, 0.5);
+}
+
+/* set root font size, so other elements sizing will be based on this */
+html {
+    /* we want to set root font size to 10px, based on the default web browser font size at 16px
+       use fraction 10 / 16 = 62.5% so that whatever font size user changes, it will always be at 10px */
+    font-size: 62.5%;
+    /* hide mobile navigator*/
+    overflow-x: hidden;
+}
+
+/* global setting for text style */
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.8rem;
+    height: 9.6rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* style the logo */
+.logo {
+    max-height: 4.4rem;
+}
+
+/******** FOOTER ********/
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+
+.footer {
+    padding: 2.2rem 0;
+    border-top: 1px solid #eee;
+    /* fix it at bottom */
+    margin-top: auto;
+    
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem
+}
+
+.grid--footer {
+    grid-template-columns: 2fr 1fr;
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: #767676;
+    margin-top: auto;
+}
+
+.contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+}
+
+.footer-link:link, .footer-link:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #767676;
+    transition: all 0.3s;
+}
+
+.footer-link:hover, .footer-link:active {
+    color: #ac9743;
+}
+
+
+/******** LOGIN PAGE ********/
+
+.app-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #F6D860
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: space-around;
+}
+
+.login-form {
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-buttons {
+    margin-top: 1.2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-form input {
+    width: 40%;
+    margin: 1.2rem;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #cae6a0;
+    border-radius: 22px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+
+.login-form input::placeholder {
+    color: #fff;
+}
+
+.error-msg {
+    font-size: 1.8rem;
+    color: rgb(134, 4, 4);
+}
+
+
+
+/* style the button */
+.btn,
+.btn:link, 
+.btn:visited {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;   
+    padding: 1.2rem 6.4rem;
+    text-decoration: none;
+    border-radius: 22px;
+    transition: all 0.3s; /* transition color */
+
+    border:none;
+    cursor: pointer;
+}
+
+.btn--full:link, .btn--full:visited {
+    background-color: #95CD41;
+    color: #FFFFFF;
+}
+
+.btn--full:hover, .btn--full:active {
+    background-color: #FF7F3F;
+    color: #FFFFFF;
+}
+
+.btn--outline:link, .btn--outline:visited {
+    background-color: #fbefbf;
+    color: #555;
+}
+
+.btn--outline:hover, .btn--outline:hover {
+    background-color: #FFFFFF;
+    color: #555;
+    box-shadow: inset 0 0 0 3px #f6d860;
+}
+
+.heading-secondary {
+    font-size: 6.4rem;
+    background: -webkit-linear-gradient(left, #95CD41, #F6D860);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3.2rem;
+}
+
+/********* MAIN CHAT PAGE *************/
+.main-chat-container {
+    width: 100%;
+    height: 83vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.list-container {
+    padding: 0 2.2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.list-top {
+    width: 100%;
+    /* padding: 2.2rem 0; */
+    height: 6.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.justify-flex-start {
+    justify-content: flex-start;
+}
+
+.action-link:link, .action-link:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.action-link:hover, .action-link:active {
+    color: #FF7F3F;
+}
+
+.btn--yellow {
+    color: #F6D860;
+}
+
+.btn--green {
+    color: #95CD41;
+}
+
+.action-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.list-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.contact-container {
+    height: 5.8rem;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.contact-item {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.last-message {
+    color: rgb(78, 78, 78);
+    font-size: 1.2rem;
+    font-style: italic;
+    justify-self: center;
+}
+
+
+.contact-active {
+    border: 1px solid #95CD41;
+    border-radius: 8px;
+    background-color: #95CD41;
+}
+
+.contact-no-border {
+    border: none;
+}
+
+.contact-name {
+    font-size: 1.8rem;
+    color: rgb(48, 47, 47);
+}
+
+.last-message-time {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.message-unread {
+    background-color: #f6d860;
+}
+
+.to-contact {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.welcome-msg {
+    font-size: 1.6rem;
+    color: rgb(56, 56, 56);
+}
+
+.chat-log {
+    margin: 1.2rem 0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.chat-dialog {
+    max-width: 40%;
+    font-size: 1.6rem;
+    color: #555;
+    padding: 1.2rem 1.8rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.other {
+    margin-right: auto;
+    background-color: #fbecb0;
+}
+
+.self {
+    margin-left: auto;
+    background-color: #95CD41;
+}
+
+.chat-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+    border-top: 1px solid #ddd;
+}
+
+input {
+    
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: 2px solid #cae6a0 ;
+    border-radius: 22px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+.chat-form input {
+    width: 95%;
+}
+
+.search-user-form input {
+    border-radius: 12px;
+}
+
+
+/******************************/
+/* MODAL */
+/******************************/
+
+.modal-dialog {
+    width: 100%;
+}
+
+/* dialog style */
+div.ui-dialog {
+    overflow: auto;
+    position: fixed;
+    
+    z-index: 30;
+    background: transparent;
+}
+
+/* close button */
+button.ui-dialog-titlebar-close {
+    width: 4.6rem;
+    height: 2.4rem;
+    top: 30px;
+    right: 10px;
+    border: none;
+    border-radius: 12px;
+    z-index: 20;
+    transition: all 0.3s;
+}
+
+button.ui-dialog-titlebar-close:hover {
+    color: #fff;
+    background-color: #95CD41;
+}
+
+div.ui-widget-overlay {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modal-label {
+    padding: 2.4rem 0;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.search-user-form {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.user-result-list {
+    margin-top: 2.4rem;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.user-item {
+    font-size: 1.6rem;
+    padding: 1.8rem;
+    background-color: #fff;
+}
+
+p.user-item:hover {
+    background-color: #95CD41;
+}
